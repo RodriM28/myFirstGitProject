@@ -48,6 +48,19 @@ int main() {
 
     cout << "Nome:" << nome << " " << sobrenome << endl;
 
+
+    //2* pi * r
+    const float PI = 3.1416; // constantes n pode ser alterado dorante o codigo / pode ser float po duble 
+    const int X = 2;
+
+    float valor;
+
+    cout <<"indique o valor do raio:";
+    cin >> valor;
+    cout << X * PI * 5 << endl;
+
+
+
     return 0;
 
 }
