@@ -56,11 +56,64 @@ int main() {
     float valor;
 
     cout <<"indique o valor do raio:";
-    cin >> valor;
+    cin >> valor; // vai dar um output
     cout << X * PI * 5 << endl;
 
+ int x=1,y=2,z=9;
+ char abc = 'a';
 
+    //operadores logiccos
+    // ==    Igual (compara)
+    //!=     Diferernte  
+    //>      Maior
+    //<      Menor
+    //>=     Maior ou igual
+    //<=     Menor ou igual
 
-    return 0;
+    //&&   significa e (i)
+    //|| (chamasa pipes) signigica ou
+/*
+int x = 1;
+int y = 2;
+    if( x ==1 || y == 5){
+        cout << "um deles bate certo << endl;
+    }eles{
+    cout << "nop...." << endl;
+    }
+*/
+    
+    int x = 1;
+    int y = 2;
+    int z = 3; 
+//eles if é uma condição que so é chamada se a anterior for falsa
+ 
+  int time = 20;
+  if (time < 18) {
+    cout << "bom dia" << endl;
+  }else{
+    cout << "BOA NOITE" << endl;
+  }
+
+  string result = (time<  18) ? "bom dia" : "boa noite";
+  cout << result;
+
+  int day; //Ta a declarar dia do tipo inteiro
+  cout << "digite um numaro 1,2,3";
+cin >> day; //esta espera de definir a variaval
+day = 2;
+
+switch (day) { //ele compara a variaval que ja foi defenida com a que TÃO no bloco 
+ case 1:
+ cout << "Segunda" <<endl;
+ break;
+ case 2:
+ cout << "segunda" << endl;
+ break;
+ case 3:
+ cout << "terça" << endl;
+ break;
+ default:
+ cout << "Dia inválido" << endl;
+}
 
 }
