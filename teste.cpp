@@ -55,7 +55,7 @@ int main() {
 
     float valor;
 
-    cout <<"indique o valor do raio:";
+    cout <<"indique o valor do raio:"<< endl;
     cin >> valor; // vai dar um output
     cout << X * PI * 5 << endl;
 
