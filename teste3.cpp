@@ -4,7 +4,7 @@
  int main() {
 
 int par;
-cout << "Introduza um numoro par:" << endl;2
+cout << "Introduza um numoro par:" << endl;
  cin >> par;
    
 
