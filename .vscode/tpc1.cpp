@@ -6,7 +6,7 @@ int main () {
    
     cout << "escolhe um numero em metros: " <<endl;
     cin >> metros;
-    cout << " em centimetros: " << metros * 1000 <<endl;
+    cout << metros << "são:" <<  metros * 1000 << "mm" <<endl;
    
    return 0;
 } 
