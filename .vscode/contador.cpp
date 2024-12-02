@@ -8,6 +8,5 @@ int main() {
 for( int x= 80; x<=200; x+=5){
     cout<< x << " " ;
 }
-
 return 0;
 }
