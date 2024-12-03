@@ -40,6 +40,21 @@ void tpcJogoAdivinhaLetra(){
     e o computador escolherá uma letra aleatória.
     
     O jogador teá que adivinhar a letra escolhida*/
+     
+     int letraescolhida;
+
+
+ char alfabeto[] { 'a', 'b', 'c','d', 'e', 'f','g','h', 'i' ,'j', 'k' ,'l' ,'m' ,'n' ,'o' ,'p' ,' q' ,'r' ,'s' ,'t' ,'u' ,'v' ,'w' ,'x' ,'y' ,'z' };
+
+ srand (time(0));
+ int alfabeto  = rand () % 26; 
+  
+
+    cout << "Bem vindo ao jogo adivinha a letra!!"<<endl;
+    cout << "Neste jogo vais ter que adivinhar a letra"<< endl;
+    cout << "Vais ter 4 tentativas"<< endl;
+    cout << "Boa sorte"<<endl;
+         
 }
 
 
@@ -48,7 +63,7 @@ void tpcJogoAdivinhaLetra(){
 
 int main() {
  
- inverteNome();
+ tpcJogoAdivinhaLetra();
  // srand (time(0));
  //int indice = rand () % 26; ( vais dar um numero aliatoria 0 a 26)
 
