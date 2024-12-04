@@ -12,11 +12,10 @@ using namespace std;
 
 int main() {
  
-  int letraescolhida;
-  int tentativas = 6;
-
-
- char alfabeto[] = {'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z' };
+  char letraescolhida;
+  int tentativas = 5;
+  bool acertou = false;
+ char alfabeto[26] = {'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z' };
 
  srand (time(0));
  int letraaliatoria  = rand () % 26; 
@@ -24,16 +23,17 @@ int main() {
     cout << "______________________________________________________" << endl;
     cout << "Bem vindo ao jogo adivinha a letra!!"<<endl;
     cout << "Neste jogo vais ter que adivinhar a letra"<< endl;
-    cout << "Vais ter 4 tentativas"<< endl;
+    cout << "Vais ter 5 tentativas"<< endl;
     cout << "Boa sorte!"<<endl;
     cout << "______________________________________________________"<< endl;
-     while (tentativas > 0 ){
-    cout << "Escolhe um numero;";
-    cin >> letraescolhida;
-    bool acertou = false;
+    
+
+        while (tentativas > 0) {
+        cout << "\nEscolha  a uma letra: ";
+        cin >> letraescolhida;
+
+        
    
-
-
    if( letraescolhida < letraaliatoria ) {
     cout << " Erraste tenta mais uma vez"<<endl;
     cout << "A letra é maior"<< endl;
@@ -45,10 +45,12 @@ int main() {
     cout <<"Boa!!! está correto" << endl;
     break;
    }
-
-    
-    
-     }
-
+     tentativas--;
+   if (tentativas > 0) {
+            cout << "Tentativas restantes: " << tentativas << endl;
+        } else {
+            cout << "Game Over! A letra correta era: " << letraaliatoria << "." << endl;
+        }
+    }
     return 0;
 }
