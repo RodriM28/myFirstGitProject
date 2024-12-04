@@ -83,6 +83,42 @@ void tpcJogoAdivinhaLetra(){
     }
 }
 
+void euromilhoes(){
+
+srand(time(0));
+cout << "Números: ";
+ for(int i= 0; i<5; i++) cout << rand () % 45 << " / ";
+ cout << endl;
+ cout << "Estrelas: ";
+for(int i= 0; i<2; i++) cout << rand () % 12 << " / ";
+cout << endl;
+}
+
+void tpcbingo(){ 
+
+    /*
+    JOgo do Bingo
+    
+    1ºParte 
+    Séra pedido ao utilizador quantos cartões de bingo ele deseja gerar. cada cartão de bingo terá 5 linha e 5 colunas e
+    preenchidos com números aleatórios de  1 a 75.
+
+    Serão gerados tantos cartões quandos o utilizador indicar.
+    (O utilizador poderá passar os cartões para u papel)
+
+    2ºParte
+    O computador irá sortear números aleatórios de 1 a 75.
+    Ganha o jogador que completar o cartão de bingo primeiro.
+
+    Regras do bingo:
+    Não podéra haver números repetidos no cartão.
+    o CARTÃO DO BINGO TÉRA 5 LINHAS E 5 COLUNAS.
+    O cartãode bingo terá números de 1 a 75.
+    Não podem ser sorteados números repetidos.
+    */
+
+
+}
 
 
 
@@ -90,7 +126,7 @@ void tpcJogoAdivinhaLetra(){
 
 int main() {
  
- tpcJogoAdivinhaLetra();
+ euromilhoes();
 
 
     return 0;
