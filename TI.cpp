@@ -125,7 +125,7 @@ using namespace std;
 int tamanhodocartao = 5; 
  int cartoes;
  bool umcartoes = true;
- 
+ srand(time(0));
 
 cout << "Bem vindo ao jogo do bingo!!" <<endl;
 cout << "Pode escolher entre 1 ou 2 cartões"<<endl;
@@ -136,17 +136,6 @@ cout << "Pode escolher entre 1 ou 2 cartões"<<endl;
         cout << "Só pode ser 1 ou 2 cartões." << endl;
     }
 
- struct NumerosDoCartao {
-        int numero;
-        bool jogado;
-    };
-
-    NumerosDoCartao num[75];
-    for (int i = 0; i < 75; i++) {
-        num[i].numero = i;
-        num[i].jogado = false;
-    }
-  
     int cartao1[tamanhodocartao][tamanhodocartao];
      int cartao2[tamanhodocartao][tamanhodocartao];
     bool usados[76] = {false}; // Para verificar se o número já foi sorteado
@@ -155,6 +144,7 @@ cout << "Pode escolher entre 1 ou 2 cartões"<<endl;
         for (int x = 0; x < tamanhodocartao; x++) {
             int numero;
             do {
+
                 numero = rand() % 75 + 1; // Gera número entre 1 e 75
             } while (usados[numero]); // Garante que o número não foi usado
 
