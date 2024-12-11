@@ -137,7 +137,7 @@ cout << "__________________________________________"<<endl;
     while( quoantidade > 0){
    if (cartoes < 1 || cartoes > 2) {
         cout << "Só pode ser 1 ou 2 cartões." << endl;
-        return 0;
+    
     }
 }
     int cartao1[tamanhodocartao][tamanhodocartao];
@@ -236,14 +236,17 @@ numero painel[MAX_NUMBER];
         }
     }
 
-
+    for(int i = 0; i < 25; i++){
+        cout << tmpCard[i] << "";
+        if((i + 1) % 5 == 0) cout << endl;
+    }
 }
 
 
 
 int main() {
  
- tpcbingo();
+ tpcbingoc();
  
     return 0;
 }
