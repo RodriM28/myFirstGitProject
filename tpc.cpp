@@ -11,46 +11,89 @@ using namespace std;
 
 
 int main() {
- 
-  char letraescolhida;
-  int tentativas = 5;
-  bool acertou = false;
- char alfabeto[26] = {'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z' };
-
- srand (time(0));
- int letraaliatoria  = rand () % 26; 
-  cout <<letraaliatoria  << endl;
-    cout << "______________________________________________________" << endl;
-    cout << "Bem vindo ao jogo adivinha a letra!!"<<endl;
-    cout << "Neste jogo vais ter que adivinhar a letra"<< endl;
-    cout << "Vais ter 5 tentativas"<< endl;
-    cout << "Boa sorte!"<<endl;
-    cout << "______________________________________________________"<< endl;
+ const int tamanhodocartao = 5; 
+ int cartoes;
+ int quoantidade =2;
+ srand(time(0));
+ cout << "________________________________________"<<endl;
+cout << "Bem vindo ao jogo do bingo!!" <<endl;
+cout << "Pode escolher entre 1 ou 2 cartões"<<endl;
+cout << "Para sair os numeros clica no 5"<<endl;
+cout << "__________________________________________"<<endl;
+ cout<< "Quantos cartoes deseja?:";
+    cin >> cartoes;
     
 
-        while (tentativas > 0) {
-        cout << "\nEscolha  a uma letra: ";
-        cin >> letraescolhida;
+   if (cartoes < 1 || cartoes > 2) {
+        cout << "Só pode ser 1 ou 2 cartões." << endl;
+      return 0;
+    }
+ 
+    int cartao1[tamanhodocartao][tamanhodocartao];
+     int cartao2[tamanhodocartao][tamanhodocartao];
+    bool usados[76] = {false}; // Para verificar se o número já foi sorteado
 
-        
-   
-   if( letraescolhida < letraaliatoria ) {
-    cout << " Erraste tenta mais uma vez"<<endl;
-    cout << "A letra é maior"<< endl;
-   } else if ( letraescolhida > letraaliatoria){
-    cout << " Erraste tenta mais uma vez"<<endl;
-    cout << "A letra é menor" << endl;
-   } else if (letraescolhida == letraaliatoria){
-    bool acertou = true;
-    cout <<"Boa!!! está correto" << endl;
-    break;
-   }
-     tentativas--;
-   if (tentativas > 0) {
-            cout << "Tentativas restantes: " << tentativas << endl;
-        } else {
-            cout << "Game Over! A letra correta era: " << letraaliatoria << "." << endl;
+    for (int y = 0; y < tamanhodocartao; y++) {
+        for (int x = 0; x < tamanhodocartao; x++) {
+            int numero;
+            do {
+                numero = rand() % 75 + 1; // Gera número entre 1 e 75
+            } while (usados[numero]); // Garante que o número não foi usado
+
+            usados[numero] = true; // Marca o número como usado
+            cartao1[x][y] = numero; // Preenche o cartão
         }
     }
+  if (cartoes == 2) {
+        for (int y = 0; y < tamanhodocartao; y++) {
+            for (int x = 0; x < tamanhodocartao; x++) {
+                int numero;
+                do {
+                    numero = rand() % 75 + 1; // Gera número entre 1 e 75
+                } while (usados[numero]); // Garante que o número não foi usado
+
+                usados[numero] = true; // Marca o número como usado
+                cartao2[x][y] = numero; // Preenche o cartão
+            }
+        }
+    }
+
+    cout << "Seu cartão 1: " << endl;
+    for (int y = 0; y < tamanhodocartao; y++) {
+        for (int x = 0; x < tamanhodocartao; x++) {
+            cout << cartao1[x][y] << "\t";
+        }
+        cout << endl;
+    }
+
+    // Exibe o segundo cartão, se necessário
+    if (cartoes == 2) {
+        cout << "\nSeu cartão 2: " << endl;
+        for (int y = 0; y < tamanhodocartao; y++) {
+            for (int x = 0; x < tamanhodocartao; x++) {
+                cout << cartao2[x][y] << "\t";
+            }
+            cout << endl;
+            
+        }
+    }
+    
+    bool aliatorio[76] = {false}; 
+    int tentativas = 75;
+     while (tentativas > 0) {
+     int numeros;
+    do {
+    numeros = rand() % 75 + 1; // Gera número entre 1 e 75
+     } while (usados[numeros]); // Garante que o número não foi usado
+      aliatorio[numeros] = true; // Marca o número como usado
+   int enter;
+   cin >> enter; 
+   if(enter = 5){
+       cout << "O numero aliatorio é:" << numeros <<endl;
+   }
+    
+    tentativas --;
+     }
+
     return 0;
 }

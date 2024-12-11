@@ -122,20 +122,24 @@ void tpcbingo(){
 using namespace std;
  
 
-int tamanhodocartao = 5; 
+const int tamanhodocartao = 5; 
  int cartoes;
- bool umcartoes = true;
+ int quoantidade =1;
  srand(time(0));
-
+ cout << "________________________________________"<<endl;
 cout << "Bem vindo ao jogo do bingo!!" <<endl;
 cout << "Pode escolher entre 1 ou 2 cartões"<<endl;
+cout << "Para sair os numeros clica no 5"<<endl;
+cout << "__________________________________________"<<endl;
  cout<< "Quantos cartoes deseja?:";
     cin >> cartoes;
     
+    while( quoantidade > 0){
    if (cartoes < 1 || cartoes > 2) {
         cout << "Só pode ser 1 ou 2 cartões." << endl;
+        return 0;
     }
-
+}
     int cartao1[tamanhodocartao][tamanhodocartao];
      int cartao2[tamanhodocartao][tamanhodocartao];
     bool usados[76] = {false}; // Para verificar se o número já foi sorteado
@@ -144,7 +148,6 @@ cout << "Pode escolher entre 1 ou 2 cartões"<<endl;
         for (int x = 0; x < tamanhodocartao; x++) {
             int numero;
             do {
-
                 numero = rand() % 75 + 1; // Gera número entre 1 e 75
             } while (usados[numero]); // Garante que o número não foi usado
 
@@ -200,7 +203,41 @@ cout << "Pode escolher entre 1 ou 2 cartões"<<endl;
      }
 }
 
+void tpcbingoc(){
 
+#define MAX_NUMBER 75
+#define MAX_NUM_OF_CARDS 5
+int tmpCard[25];
+
+struct numero{
+
+    int num;
+    bool stf;
+};
+
+numero painel[MAX_NUMBER];
+
+  for(int i = 0; i < MAX_NUMBER; i++){
+    painel[i].num = i + 1;
+    painel[i].stf = false;
+  }
+
+    srand(time(0));
+
+    for(int i = 0; i < 25; i++){
+
+        tmpCard[i] = rand() % MAX_NUMBER;
+
+        for(int j = 0; j < i; j++){
+            if(tmpCard[i] == tmpCard[i]){
+                i--;
+                break;
+            }
+        }
+    }
+
+
+}
 
 
 
