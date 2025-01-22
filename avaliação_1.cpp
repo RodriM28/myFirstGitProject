@@ -51,7 +51,7 @@ int main() {
 
             sorteados[aleatorio] = true;
             cout << "O nome sorteado foi: " << nomes[aleatorio] <<endl;
-  
+
     }
        cout << "já não a elementos na roleta!!" <<endl;
     }else if(escolha == 2){
