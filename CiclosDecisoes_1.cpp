@@ -1,8 +1,11 @@
 #include <iostream>
 using namespace std;
 
+
+char vogais[] = {'a','e','i','o','u'};
+
 int main(){
-   char vogais[] = {'a','e','i','o','u'};
+  
 
 
    for(char vogal : vogais){
