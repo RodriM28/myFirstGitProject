@@ -22,6 +22,14 @@ return 0;
 }
 */
 
+
+/**
+ * comentario java(ele aseita parametros e ele adiciona a descrição a função etc...)
+ * @brief asndklnasldn 
+ * @param (esta mete na variaval que estiver a freente);
+ * @return (ADICIONA AO RETERN)
+ */
+
 #include <iostream>
 using namespace std;
 
@@ -30,4 +38,4 @@ int main() {
 
 
     return 0;
-}
+}               
